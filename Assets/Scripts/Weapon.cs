@@ -11,5 +11,7 @@ public class Weapon : MonoBehaviour
         {
             collision.GetComponent<Enemy>()?.TakeDamage(1);
         }
+
+        //Hi Github
     }
 }
