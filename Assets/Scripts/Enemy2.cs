@@ -10,9 +10,7 @@ public class Enemy2 : MonoBehaviour
     [SerializeField] Transform playerPos;
     Vector3 dirMove;
 
-    int xpValue = 10;
-    GameObject XP;
-
+   
     int Health;
 
 
@@ -33,16 +31,10 @@ public class Enemy2 : MonoBehaviour
         Health -= someDamage;
         if (Health <= 0) Death();
     }
-    void DropXP()
-    {
-        //XPOrb orb = Instantiate(XP, transform.position, Quaternion.identity).GetComponent<XPOrb>;  // Create the XP object at the enemy's position
-        //orb.setValues(xpValue);
-
-    }
 
     void Death()
     {
-        DropXP();
+        
         Destroy(gameObject);
     }
 

@@ -1,0 +1,4 @@
+repository "survivors-project@yasminadas@cloud"
+  path "/"
+    br "/main"
+    co "/main"

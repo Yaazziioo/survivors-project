@@ -8,12 +8,19 @@ public class Enemy : MonoBehaviour
     [SerializeField] int MaxHealth;
     [SerializeField] Transform playerPos;
     Vector3 dirMove;
+    Player player;
 
     int Health;
+
+    int expAmount = 10;
+
+
 
     void Start()
     {
         Health = MaxHealth;
+
+        player = FindFirstObjectByType<Player>();
     }
 
     void Update()
@@ -30,8 +37,10 @@ public class Enemy : MonoBehaviour
     }
 
     void Death()
-    { 
-        Destroy(gameObject);
+    {
+        player.XP++;
+        //player.XP += 1; // player.XP = player.XP + 1;
+             Destroy(gameObject);
     }
 
     

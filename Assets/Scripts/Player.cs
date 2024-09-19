@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public float MoveSpeed;
     public int MaxHealth;
     public int Health { get; private set; }  // Public property for Health
+    public float XP;
 
     float horizontalMove;
     float verticalMove;
@@ -57,7 +58,7 @@ public class Player : MonoBehaviour
         Health -= someDamage;
         if (Health <= 0)
         {
-            Debug.Log("Player is dead.");
+          
             Death();
 
         }
@@ -68,4 +69,4 @@ public class Player : MonoBehaviour
     {
         Destroy(gameObject);
     }
-}
+   }
